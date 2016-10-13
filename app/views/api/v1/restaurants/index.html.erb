@@ -1,0 +1,26 @@
+<h1>Test passed!</h1>
+
+<div ng-app="app">
+  <div ng-controller="restaurant_ctlr">
+    {{ restaurants[0] }}
+    <div ng-repeat="restaurant in restaurants">
+      <div>
+        <h3>Name: {{restaurant.dba}} ({{restaurant.cuisine_description}})</h3>
+        <h4>Address: {{restaurant.building}} {{restaurant.street}}
+                     {{restaurant.boro}}, NY {{restaurant.zipcode}}
+        </h4>
+        <h4>Phone Number: {{ restaurant.phone }}</h4>
+      </div>
+      <h3>Initial Inspection Date: {{restaurant.grade_date}}</h3>
+      <h3>Initial Grade: {{restaurant.grade}}</h3>
+      <h3>Most Recent Inspection Date: {{restaurant.record_date}}</h3>
+        <ul>
+          <h4>Violation Level: "{{restaurant.critical_flag}}"</h4>
+          <h4>Violation Code: {{restaurant.violation_code}}</h4>
+        </ul>
+        <ol>
+          <li>{{restaurant.violation_description}}</li>
+        </ol>
+    </div>
+  </div>
+</div>
